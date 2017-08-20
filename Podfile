@@ -10,7 +10,8 @@ target 'V2EX' do
     pod 'AlamofireImage', '~> 3.1'
     pod 'SwiftyJSON'
     pod 'lottie-ios', '~> 2.0.4'
-
+    pod 'SwiftTheme', '~> 0.3.3'
+    pod 'ESTabBarController-swift'
 
   target 'V2EXTests' do
     inherit! :search_paths

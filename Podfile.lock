@@ -2,6 +2,7 @@ PODS:
   - Alamofire (4.5.0)
   - AlamofireImage (3.2.0):
     - Alamofire (~> 4.1)
+  - ESTabBarController-swift (2.5)
   - lottie-ios (2.0.4)
   - RxBlocking (3.6.1):
     - RxSwift (~> 3.6)
@@ -10,28 +11,33 @@ PODS:
   - RxSwift (3.6.1)
   - RxTest (3.6.1):
     - RxSwift (~> 3.6)
+  - SwiftTheme (0.3.3)
   - SwiftyJSON (3.1.4)
 
 DEPENDENCIES:
   - Alamofire (~> 4.4)
   - AlamofireImage (~> 3.1)
+  - ESTabBarController-swift
   - lottie-ios (~> 2.0.4)
   - RxBlocking (~> 3.0)
   - RxCocoa (~> 3.0)
   - RxSwift (~> 3.0)
   - RxTest (~> 3.0)
+  - SwiftTheme (~> 0.3.3)
   - SwiftyJSON
 
 SPEC CHECKSUMS:
   Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
   AlamofireImage: 157ed682cc81d3b9db4fb90c1f12180ac552d93b
+  ESTabBarController-swift: 8daa432f2a9be8ebd25101dc46c84472fd760512
   lottie-ios: a5100b16eb8e5ea92019e0c92c405889cb580289
   RxBlocking: 4f4bd5732e8b952e54ae8a57739bcfb645de12bc
   RxCocoa: 84a08739ab186248c7f31ce4ee92d6f8a947d690
   RxSwift: f9de85ea20cd2f7716ee5409fc13523dc638e4e4
   RxTest: 1d00348a7848c91ab5bf5d197d2378aa6b2bb356
+  SwiftTheme: 85f84747a48749b5b3df7c3e96fc0b1d45677d30
   SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
 
-PODFILE CHECKSUM: c2804b6c30a8f71c71dc0b5d3c9933eb172a0503
+PODFILE CHECKSUM: f2e43971b3dc1b0851955ba1a156dcda2f37f125
 
 COCOAPODS: 1.2.1
