@@ -9,10 +9,10 @@
 /* Begin PBXBuildFile section */
 		13A289641F48193E00976097 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 13A2895C1F48193E00976097 /* Info.plist */; };
 		13A289651F48193E00976097 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13A2895E1F48193E00976097 /* LaunchScreen.storyboard */; };
-		13A289661F48193E00976097 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13A289601F48193E00976097 /* Main.storyboard */; };
 		13A289671F48193E00976097 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13A289621F48193E00976097 /* Assets.xcassets */; };
-		13A289681F48193E00976097 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A289631F48193E00976097 /* AppDelegate.swift */; };
 		13A2896A1F48194700976097 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A289691F48194700976097 /* ViewController.swift */; };
+		13A289861F49F0A500976097 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A289851F49F0A400976097 /* AppDelegate.swift */; };
+		13A289881F49F26100976097 /* VEXTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A289871F49F26100976097 /* VEXTabBarController.swift */; };
 		13B191351F46F61A0011326D /* V2EXTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B191341F46F61A0011326D /* V2EXTests.swift */; };
 		50614AC42B79EABA036272C7 /* Pods_V2EX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE3BB83C6C287FDF0AB09842 /* Pods_V2EX.framework */; };
 		E6CD0FAAC4CE87D289A34CF6 /* Pods_V2EXTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F5AA609A45EFE07B1F2412E /* Pods_V2EXTests.framework */; };
@@ -31,10 +31,10 @@
 /* Begin PBXFileReference section */
 		13A2895C1F48193E00976097 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		13A2895F1F48193E00976097 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		13A289611F48193E00976097 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Main.storyboard; sourceTree = "<group>"; };
 		13A289621F48193E00976097 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		13A289631F48193E00976097 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		13A289691F48194700976097 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ../../ViewController.swift; sourceTree = "<group>"; };
+		13A289851F49F0A400976097 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		13A289871F49F26100976097 /* VEXTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VEXTabBarController.swift; sourceTree = "<group>"; };
 		13B1911C1F46F61A0011326D /* V2EX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = V2EX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B191301F46F61A0011326D /* V2EXTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = V2EXTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B191341F46F61A0011326D /* V2EXTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V2EXTests.swift; sourceTree = "<group>"; };
@@ -73,7 +73,6 @@
 				13A2895C1F48193E00976097 /* Info.plist */,
 				13A2895D1F48193E00976097 /* Base.lproj */,
 				13A289621F48193E00976097 /* Assets.xcassets */,
-				13A289631F48193E00976097 /* AppDelegate.swift */,
 			);
 			path = Support;
 			sourceTree = "<group>";
@@ -82,7 +81,6 @@
 			isa = PBXGroup;
 			children = (
 				13A2895E1F48193E00976097 /* LaunchScreen.storyboard */,
-				13A289601F48193E00976097 /* Main.storyboard */,
 			);
 			path = Base.lproj;
 			sourceTree = "<group>";
@@ -107,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				13A289691F48194700976097 /* ViewController.swift */,
+				13A289871F49F26100976097 /* VEXTabBarController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -162,6 +161,7 @@
 		13B1911E1F46F61A0011326D /* V2EX */ = {
 			isa = PBXGroup;
 			children = (
+				13A289851F49F0A400976097 /* AppDelegate.swift */,
 				13A2897E1F481C9E00976097 /* Views */,
 				13A289811F481C9E00976097 /* Locales */,
 				13A289821F481C9E00976097 /* Library */,
@@ -251,6 +251,7 @@
 		13B191141F46F61A0011326D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = VEX;
 				LastSwiftUpdateCheck = 0830;
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = com.Kyle;
@@ -293,7 +294,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				13A289661F48193E00976097 /* Main.storyboard in Resources */,
 				13A289641F48193E00976097 /* Info.plist in Resources */,
 				13A289671F48193E00976097 /* Assets.xcassets in Resources */,
 				13A289651F48193E00976097 /* LaunchScreen.storyboard in Resources */,
@@ -407,8 +407,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13A289861F49F0A500976097 /* AppDelegate.swift in Sources */,
 				13A2896A1F48194700976097 /* ViewController.swift in Sources */,
-				13A289681F48193E00976097 /* AppDelegate.swift in Sources */,
+				13A289881F49F26100976097 /* VEXTabBarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,14 +438,6 @@
 				13A2895F1F48193E00976097 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		13A289601F48193E00976097 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				13A289611F48193E00976097 /* Base */,
-			);
-			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
