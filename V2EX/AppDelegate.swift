@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // setup tabBarController
         window = UIWindow.init(frame: UIScreen.main.bounds)
         window?.backgroundColor = .white
-        window?.rootViewController = VEXTabBarController()
+        window?.rootViewController = TabBarController()
         window?.makeKeyAndVisible()
         
         return true
