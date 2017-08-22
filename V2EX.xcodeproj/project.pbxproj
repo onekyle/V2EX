@@ -18,6 +18,7 @@
 		13A289941F4B0B4A00976097 /* Publish ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A289931F4B0B4A00976097 /* Publish ViewController.swift */; };
 		13A289961F4B0B5B00976097 /* MessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A289951F4B0B5B00976097 /* MessageViewController.swift */; };
 		13A289981F4B0BC500976097 /* MineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A289971F4B0BC500976097 /* MineViewController.swift */; };
+		13A2899F1F4C1AB300976097 /* TapticEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13A2899E1F4C1AB300976097 /* TapticEngine.swift */; };
 		13B191351F46F61A0011326D /* V2EXTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B191341F46F61A0011326D /* V2EXTests.swift */; };
 		50614AC42B79EABA036272C7 /* Pods_V2EX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE3BB83C6C287FDF0AB09842 /* Pods_V2EX.framework */; };
 		E6CD0FAAC4CE87D289A34CF6 /* Pods_V2EXTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F5AA609A45EFE07B1F2412E /* Pods_V2EXTests.framework */; };
@@ -45,6 +46,7 @@
 		13A289931F4B0B4A00976097 /* Publish ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Publish ViewController.swift"; sourceTree = "<group>"; };
 		13A289951F4B0B5B00976097 /* MessageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageViewController.swift; sourceTree = "<group>"; };
 		13A289971F4B0BC500976097 /* MineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MineViewController.swift; sourceTree = "<group>"; };
+		13A2899E1F4C1AB300976097 /* TapticEngine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TapticEngine.swift; sourceTree = "<group>"; };
 		13B1911C1F46F61A0011326D /* V2EX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = V2EX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B191301F46F61A0011326D /* V2EXTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = V2EXTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B191341F46F61A0011326D /* V2EXTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = V2EXTests.swift; sourceTree = "<group>"; };
@@ -153,6 +155,14 @@
 			path = Configs;
 			sourceTree = "<group>";
 		};
+		13A2899D1F4C1A9200976097 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				13A2899E1F4C1AB300976097 /* TapticEngine.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		13B191131F46F61A0011326D = {
 			isa = PBXGroup;
 			children = (
@@ -178,6 +188,7 @@
 			children = (
 				13A289851F49F0A400976097 /* AppDelegate.swift */,
 				13A2897E1F481C9E00976097 /* Views */,
+				13A2899D1F4C1A9200976097 /* Utils */,
 				13A289821F481C9E00976097 /* Library */,
 				13A289811F481C9E00976097 /* Locales */,
 				13A289831F481C9E00976097 /* DataSources */,
@@ -423,6 +434,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				13A289861F49F0A500976097 /* AppDelegate.swift in Sources */,
+				13A2899F1F4C1AB300976097 /* TapticEngine.swift in Sources */,
 				13A2898E1F4B0A7D00976097 /* HomeViewController.swift in Sources */,
 				13A2896A1F48194700976097 /* ViewController.swift in Sources */,
 				13A289981F4B0BC500976097 /* MineViewController.swift in Sources */,
@@ -504,7 +516,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -549,7 +561,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -566,6 +578,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = G29F95377T;
 				INFOPLIST_FILE = V2EX/Support/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Kyle.V2EX;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -582,6 +595,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = G29F95377T;
 				INFOPLIST_FILE = V2EX/Support/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Kyle.V2EX;
 				PRODUCT_NAME = "$(TARGET_NAME)";

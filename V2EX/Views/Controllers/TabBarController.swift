@@ -66,6 +66,13 @@ class TabBarController: ESTabBarController {
 
 extension TabBarController: UITabBarControllerDelegate {
     
+    func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
+        if tabBarController.selectedViewController != viewController {
+            TapticEngine.impact.feedback(.light)
+        }
+        return true
+    }
+    
     func tabBarController(_ tabBarController: UITabBarController, animationControllerForTransitionFrom fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         return transitionAnimator
     }
