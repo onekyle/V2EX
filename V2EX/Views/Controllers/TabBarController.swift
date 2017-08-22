@@ -11,6 +11,16 @@ import ESTabBarController_swift
 
 class TabBarController: ESTabBarController {
 
+    override var viewControllers: [UIViewController]? {
+        didSet {
+            transitionAnimator.viewControllers = viewControllers
+        }
+    }
+    
+    let transitionAnimator = TabBarControllerTransitionAnimator()
+    
+    
+    
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
@@ -38,6 +48,7 @@ class TabBarController: ESTabBarController {
             
         }
         self.viewControllers = viewControllers;
+        self.delegate = self;
         
     }
     
@@ -51,4 +62,55 @@ class TabBarController: ESTabBarController {
         // Do any additional setup after loading the view.
     }
 
+}
+
+extension TabBarController: UITabBarControllerDelegate {
+    
+    func tabBarController(_ tabBarController: UITabBarController, animationControllerForTransitionFrom fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return transitionAnimator
+    }
+    
+}
+
+class TabBarControllerTransitionAnimator: NSObject, UIViewControllerAnimatedTransitioning {
+    
+    var viewControllers: [UIViewController]?
+    
+    func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
+        return 0.25
+    }
+    
+    func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
+        
+        guard let viewControllers = viewControllers, let fromViewController = transitionContext.viewController(forKey: .from), let toViewController = transitionContext.viewController(forKey: .to) else { return }
+        
+        
+        
+        guard let fromIndex = viewControllers.index(of: fromViewController), let toIndex = viewControllers.index(of: toViewController) else { return }
+        
+        var startX: CGFloat = 20.0
+        
+        if fromIndex < toIndex {
+            startX = -startX
+        }
+        
+        guard let fromView = transitionContext.view(forKey: .from), let toView = transitionContext.view(forKey: .to) else { return }
+        
+        let containView = transitionContext.containerView
+        toView.frame = CGRect(x: -startX, y: 0, width: containView.frame.width, height: containView.frame.height)
+        toView.alpha = 0.0;
+        containView.addSubview(fromView)
+        containView.addSubview(toView)
+        
+        UIView.animate(withDuration: self.transitionDuration(using: transitionContext), animations: { 
+            fromView.transform = fromView.transform.translatedBy(x: startX, y: 0)
+            fromView.alpha = 0.0
+            toView.transform = toView.transform.translatedBy(x: startX, y: 0)
+            toView.alpha = 1.0
+        }) { (_) in
+            fromView.alpha = 1.0
+            transitionContext.completeTransition(true)
+        };
+    }
+    
 }
