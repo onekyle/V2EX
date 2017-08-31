@@ -12,6 +12,7 @@ target 'V2EX' do
     pod 'lottie-ios', '~> 2.0.4'
     pod 'SwiftTheme', '~> 0.3.3'
     pod 'ESTabBarController-swift'
+    pod 'MJRefresh'
 
   target 'V2EXTests' do
     inherit! :search_paths
